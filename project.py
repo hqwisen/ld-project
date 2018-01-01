@@ -9,7 +9,6 @@ def get_config(configfile):
     try:
         config = {}
         exec(open(configfile).read(), config)
-        # FIXME find another way to parse to avoid del builtins
         del config['__builtins__']
         return config
     except FileNotFoundError:
@@ -23,6 +22,7 @@ def get_config(configfile):
 class Simulation:
     def __init__(self, config):
         self.config = config
+        self.scores = [0 for _ in range(self.config['number_of_player'])]
 
     def run(self):
         for i in range(self.config['number_of_game']):
