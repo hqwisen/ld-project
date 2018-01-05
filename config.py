@@ -1,9 +1,9 @@
-number_of_game = 1
+number_of_games = 2000
 
-number_of_player = 2
+number_of_players = 2
 
-b = 2
-c = 1
+b = 40
+c = 15
 
 # Actions (index in gammas)
 
@@ -35,3 +35,5 @@ player2_int = xI
 
 x0 = D  # Delib. play for gamma0
 x1 = C  # Delib. play for gamma1
+
+delibaration_plays = [x0, x1]
